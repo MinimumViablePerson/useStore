@@ -1,6 +1,6 @@
 {
   "name": "@mvps/usestore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use a global store with hooks, no Redux or message passing.",
   "main": "useStore.js",
   "scripts": {
