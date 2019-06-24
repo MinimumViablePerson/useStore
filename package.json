@@ -1,0 +1,30 @@
+{
+  "name": "@mvps/usestore",
+  "version": "1.0.0",
+  "description": "Use a global store with hooks, no Redux or message passing.",
+  "main": "useStore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinimumViablePerson/useStore.git"
+  },
+  "peerDependencies": {
+    "react": "16.8.x",
+    "react-dom": "16.8.x"
+  },
+  "keywords": [
+    "hook",
+    "react",
+    "store",
+    "state",
+    "global"
+  ],
+  "author": "Nicolas Marcora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MinimumViablePerson/useStore/issues"
+  },
+  "homepage": "https://github.com/MinimumViablePerson/useStore#readme"
+}

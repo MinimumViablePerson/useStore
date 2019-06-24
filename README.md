@@ -2,12 +2,16 @@
 
 Get access to a global store with just hooks, no Redux or message passing.
 
+## How to install
+
+```bash
+npm i @mvps@usestore
+```
+
 ## How to use
 
-Copy [`useStore.js`](/useStore.js) into your project, then:
-
 ```js
-import useStore from './useStore'
+import useStore from '@mvps/usestore'
 
 const App = props => {
   // you can set the initial state in the first call:
@@ -18,7 +22,7 @@ const App = props => {
 
 // then, in any other component, just retrieve the value from the store:
 
-import useStore from './useStore'
+import useStore from '@mvps/usestore'
 
 const Counter = props => {
   const [count, setCount] = useStore('count')
