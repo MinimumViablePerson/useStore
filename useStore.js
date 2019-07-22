@@ -16,8 +16,6 @@ const setStateForKey = key => newState => {
 
   // all all the listeners for this key to re-render dependent components
   listeners[key].forEach(listener => listener({}))
-
-  console.log('Store: ', store)
 }
 
 const useStore = (key, initialState) => {
