@@ -11,7 +11,6 @@ const setStateForKey = key => newState => {
   if (newState !== undefined) {
     // update the store with the new state for the given key
     store = { ...store, [key]: newState }
-    listeners[key] = listeners[key] || []
   }
 
   // all all the listeners for this key to re-render dependent components
@@ -22,6 +21,7 @@ const useStore = (key, initialState) => {
   // add the new key with its initial state if it doesn't exist already
   if (store[key] === undefined) {
     store = { ...store, [key]: initialState }
+    listeners[key] = listeners[key] || []
   }
 
   // create a new listener to trigger this component's re-render
