@@ -33,7 +33,7 @@ const useStore = (key, initialState) => {
     listeners[key].push(newListener)
 
     // remove the listener for this component when unmounted
-    return () => { listeners = listeners.filter(listener => listener !== newListener) }
+    return () => { listeners[key] = listeners[key].filter(listener => listener !== newListener) }
   }, [])
 
   return [store[key], setStateForKey(key)]
