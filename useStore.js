@@ -13,7 +13,7 @@ const setStateForKey = key => newState => {
     store = { ...store, [key]: newState }
   }
 
-  // all all the listeners for this key to re-render dependent components
+  // call all the listeners for this key to re-render dependent components
   listeners[key].forEach(listener => listener({}))
 }
 
