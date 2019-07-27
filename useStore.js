@@ -15,14 +15,13 @@ const setStateForKey = key => newState => {
 
   // all all the listeners for this key to re-render dependent components
   listeners[key].forEach(listener => listener({}))
-
-  console.log('Store: ', store)
 }
 
 const useStore = (key, initialState) => {
   // add the new key with its initial state if it doesn't exist already
   if (store[key] === undefined) {
     store = { ...store, [key]: initialState }
+    listeners[key] = listeners[key] || []
   }
 
   // create a new listener to trigger this component's re-render
@@ -34,7 +33,7 @@ const useStore = (key, initialState) => {
     listeners[key].push(newListener)
 
     // remove the listener for this component when unmounted
-    return () => { listeners = listeners.filter(listener => listener !== newListener) }
+    return () => { listeners[key] = listeners[key].filter(listener => listener !== newListener) }
   }, [])
 
   return [store[key], setStateForKey(key)]
